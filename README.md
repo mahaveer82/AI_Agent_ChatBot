@@ -33,13 +33,36 @@ This project is a dynamic and customizable **AI chatbot application** built usin
   ├── frontend.py       # Streamlit UI
   ├── requirements.txt  # Dependencies
   └── README.md
+  ```
 
 ## 🚀 How to Run
 🔐 Step 1: Set API Keys
 Set the following environment variables in your terminal or .env file:
 
-OPENAI_API_KEY
+  - OPENAI_API_KEY
 
-GROQ_API_KEY
+  - GROQ_API_KEY
 
-TAVILY_API_KEY
+  - TAVILY_API_KEY
+
+```bash
+export OPENAI_API_KEY=your_key
+export GROQ_API_KEY=your_key
+export TAVILY_API_KEY=your_key
+```
+Or uncomment and use load_dotenv() in backend.py.
+
+⚙️ Step 2: Install Requirements
+```bash
+pip install -r requirements.txt
+```
+
+🚦 Step 3: Run the Backend (FastAPI)
+```bash
+uvicorn backend:app --reload --port 9999
+```
+
+💻 Step 4: Run the Frontend (Streamlit)
+```bash
+streamlit run frontend.py
+```
